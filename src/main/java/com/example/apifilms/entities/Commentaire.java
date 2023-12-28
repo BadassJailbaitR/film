@@ -19,6 +19,7 @@ public class Commentaire {
 
     private String contenu;
 
+    private String date;
 
     private String auteur;
 
@@ -26,6 +27,14 @@ public class Commentaire {
 
     public Long getId() {
         return id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public void setId(Long id) {
@@ -54,5 +63,16 @@ public class Commentaire {
 
     public void setReference(Long reference) {
         this.reference = reference;
+    }
+
+    @Override
+    public String toString() {
+        return "Commentaire{" +
+                "id=" + id +
+                ", contenu='" + contenu + '\'' +
+                ", date='" + date + '\'' +
+                ", auteur='" + auteur + '\'' +
+                ", reference=" + reference +
+                '}';
     }
 }

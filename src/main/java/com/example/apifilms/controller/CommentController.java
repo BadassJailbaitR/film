@@ -27,7 +27,7 @@ public class CommentController {
     @CrossOrigin(origins = "*")
     @PostMapping("/comments/")
     Commentaire addComment( @RequestBody Commentaire commentaire){
-
+        System.out.println(commentaire);
         return commentaireRep.save(commentaire);
 
     }
